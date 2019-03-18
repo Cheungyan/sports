@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_home"
+            android:checked="true"
+            android:title="@string/home"
+            android:icon="@drawable/img_menu_run" />
+        <item
+            android:id="@+id/item_sports"
+            android:checked="true"
+            android:title="@string/item_sports"
+            android:icon="@drawable/img_menu_sports" />
+
+        <item
+            android:id="@+id/item_liscense"
+            android:checkable="false"
+            android:title="@string/eat"
+            android:icon="@drawable/img_menu_eat" />
+
+
+        <item
+            android:id="@+id/item_about"
+            android:title="@string/item_about"
+            android:checkable="false"
+            android:icon="@drawable/img_navigation_menu_info" />
+
+    </group>
+
+</menu>

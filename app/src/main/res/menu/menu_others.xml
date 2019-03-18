@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/map_state_change"
+        android:icon="@drawable/img_btn_home_map"
+        android:title="@string/change"
+        app:showAsAction="ifRoom" />
+
+</menu>
