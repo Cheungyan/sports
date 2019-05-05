@@ -10,8 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import me.zy.sports.R;
+import me.zy.sports.activitys.LoginHeader.LoginHeader;
+import me.zy.sports.activitys.LoginHeader.RegisteredActivity;
 import me.zy.sports.activitys.about.About;
 import me.zy.sports.activitys.historylistpage.RecordListActivity;
 import me.zy.sports.activitys.runningpage.RuningActivity;
@@ -20,7 +24,7 @@ import me.zy.sports.activitys.runningpage.RuningActivity;
 /***
  * 软件主界面
  */
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnStartRunning;
     private DrawerLayout mDrawerLayout;
@@ -38,23 +42,32 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void initFindView(){
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawLayout);
         btnStartRunning = (Button) findViewById(R.id.btn_start);
         mNavigationView = (NavigationView) findViewById(R.id.navigation);
-
+        RelativeLayout relativeLayout=(RelativeLayout)mNavigationView.inflateHeaderView(R.layout.navi_heard_layout);
+        ImageView imageView=(ImageView)relativeLayout.findViewById(R.id.login);
+        imageView.setOnClickListener(this);
     }
-
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.login)
+        {
+            startActivity(new Intent(HomeActivity.this, LoginHeader.class));
+        }
+    }
     /**
      * 设置点击事件
      */
     public void setOnclick(){
+
 
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 switch (id) {
+
                     case R.id.item_home:
                         break;
                     case R.id.item_about:
@@ -97,6 +110,7 @@ public class HomeActivity extends AppCompatActivity {
 
         mDrawerLayout.openDrawer(GravityCompat.START);
     }
+
 
 
 }

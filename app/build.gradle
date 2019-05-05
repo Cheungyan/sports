@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 28
     buildToolsVersion '25.0.0'
 
 
@@ -10,11 +10,13 @@ android {
             enabled = true
         }
     }
-
+    configurations {
+        all*.exclude  module: 'gson'
+    }
     defaultConfig {
         applicationId "me.zy.sports"
         minSdkVersion 17
-        targetSdkVersion 23
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -60,4 +62,11 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     testCompile 'junit:junit:4.12'
+    //BmobSDK
+    compile 'cn.bmob.android:bmob-sdk:3.7.3-rc1'
+    compile "io.reactivex.rxjava2:rxjava:2.2.2"
+    compile 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    compile 'com.squareup.okio:okio:2.1.0'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'com.squareup.okhttp3:okhttp:3.12.0'
 }

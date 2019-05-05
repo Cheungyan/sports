@@ -13,9 +13,6 @@ import me.zy.sports.dao.bean.RunData;
 import me.zy.sports.map.utils.RunDataModelUtil;
 import me.zy.sports.map.utils.TraceUtil;
 
-/**
- * Created by Adminis on 2017/3/27.
- */
 
 public class RunDataSaveUtil {
 
