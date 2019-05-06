@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.bmob.v3.Bmob;
@@ -29,6 +30,7 @@ public class LoginHeader extends AppCompatActivity implements View.OnClickListen
     private Button btn_registered;
     private EditText et_username;
     private EditText et_password;
+    private TextView forget;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class LoginHeader extends AppCompatActivity implements View.OnClickListen
     }
 
     private void initView() {
+        forget=(TextView)findViewById(R.id.forget) ;
+        forget.setOnClickListener(this);
 
         et_username=(EditText)findViewById(R.id.et_username);
         et_password=(EditText)findViewById(R.id.et_password);
@@ -62,6 +66,9 @@ public class LoginHeader extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch(v.getId())
         {
+            case R.id.forget:
+                startActivity(new Intent(this,ForgetPasswordActivity.class));
+                break;
 
             case R.id.btn_login:
                 String name=et_username.getText().toString().trim();

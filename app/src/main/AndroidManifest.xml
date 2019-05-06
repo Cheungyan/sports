@@ -15,14 +15,17 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     //地图包、搜索包需要的基础权限
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     //定位包、导航包需要的额外权限（注：基础权限也需要）
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -79,16 +82,20 @@
         </activity>
 
         <activity
-            android:name="me.zy.sports.activitys.eat.eat"
+            android:name="me.zy.sports.activitys.eat.eat_Activity"
             android:label="@string/eat"
             android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
+        <activity android:name=".activitys.eat.WebViewActivity"/>
+
         <activity android:name=".activitys.LoginHeader.LoginHeader"
             android:label="注册">
         </activity>
         <activity android:name=".activitys.LoginHeader.RegisteredActivity"
             android:label="登录"/>
+
+        <activity android:name=".activitys.LoginHeader.ForgetPasswordActivity"/>
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
             android:authorities="me.zy.sports.BmobContentProvider">

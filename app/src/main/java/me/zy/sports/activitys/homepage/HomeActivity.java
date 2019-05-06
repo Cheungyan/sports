@@ -17,6 +17,7 @@ import me.zy.sports.R;
 import me.zy.sports.activitys.LoginHeader.LoginHeader;
 import me.zy.sports.activitys.LoginHeader.RegisteredActivity;
 import me.zy.sports.activitys.about.About;
+import me.zy.sports.activitys.eat.eat_Activity;
 import me.zy.sports.activitys.historylistpage.RecordListActivity;
 import me.zy.sports.activitys.runningpage.RuningActivity;
 
@@ -41,25 +42,35 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public void initFindView(){
+    public void initFindView() {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawLayout);
         btnStartRunning = (Button) findViewById(R.id.btn_start);
+        btnStartRunning.setOnClickListener(this);
         mNavigationView = (NavigationView) findViewById(R.id.navigation);
-        RelativeLayout relativeLayout=(RelativeLayout)mNavigationView.inflateHeaderView(R.layout.navi_heard_layout);
-        ImageView imageView=(ImageView)relativeLayout.findViewById(R.id.login);
+        RelativeLayout relativeLayout = (RelativeLayout) mNavigationView.inflateHeaderView(R.layout.navi_heard_layout);
+        ImageView imageView = (ImageView) relativeLayout.findViewById(R.id.login);
         imageView.setOnClickListener(this);
     }
+
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.login)
-        {
-            startActivity(new Intent(HomeActivity.this, LoginHeader.class));
+        switch (v.getId()) {
+
+
+            case R.id.login:
+                startActivity(new Intent(HomeActivity.this, LoginHeader.class));
+                break;
+
+            case R.id.btn_start:
+                startActivity(new Intent(HomeActivity.this, RuningActivity.class));
+                break;
         }
     }
+
     /**
      * 设置点击事件
      */
-    public void setOnclick(){
+    public void setOnclick() {
 
 
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -67,14 +78,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 switch (id) {
-
+                    case R.id.item_eat:
+                        startActivity(new Intent(HomeActivity.this, eat_Activity.class));
+                        break;
                     case R.id.item_home:
                         break;
                     case R.id.item_about:
                         startActivity(new Intent(HomeActivity.this, About.class));
                         break;
-                    case R.id.item_liscense:
-                        break;
+
                     default:
                 }
 
@@ -83,17 +95,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        btnStartRunning.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, RuningActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     /**
      * 展示历史轨迹
+     *
      * @param view
      */
     public void showHistoryTrace(View view) {
@@ -104,13 +111,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     /**
      * 呼出抽屉菜单
+     *
      * @param view
      */
     public void showNaviMenu(View view) {
 
         mDrawerLayout.openDrawer(GravityCompat.START);
     }
-
-
-
 }

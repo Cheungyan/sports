@@ -6,7 +6,7 @@
 
 
     <com.amap.api.maps.MapView
-        android:id="@+id/map"
+        android:id="@+id/aaamap"
         android:layout_marginTop="@dimen/y115"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

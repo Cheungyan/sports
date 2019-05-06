@@ -18,7 +18,7 @@ import me.zy.sports.map.impl.AmapImpl;
 public class AMapShowFragment extends Fragment {
 
     private AMap aMap;
-    private MapView bMapView;
+    private MapView MapView;
     private AmapImpl aMapImpl;
 
 
@@ -26,12 +26,12 @@ public class AMapShowFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fg_show_amap, container, false);
-        bMapView = (MapView) view.findViewById(R.id.map);
+        MapView = (MapView)view.findViewById(R.id.aaamap);
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
-        bMapView.onCreate(savedInstanceState);// 重写此方法
+        MapView.onCreate(savedInstanceState);// 此方法必须重写
         if (aMap == null) {
 
-            aMap = bMapView.getMap();
+            aMap = MapView.getMap();
             aMap.moveCamera(CameraUpdateFactory.zoomTo(16));
         }
         aMapImpl = new AmapImpl(getActivity(), aMap);
@@ -68,32 +68,40 @@ public class AMapShowFragment extends Fragment {
     }
 
 
-    //方法重写
+    /**
+     * 方法必须重写
+     */
     @Override
     public void onResume() {
         super.onResume();
-        bMapView.onResume();
+        MapView.onResume();
     }
 
-    //方法重写
+    /**
+     * 方法必须重写
+     */
     @Override
     public void onPause() {
         super.onPause();
-        bMapView.onPause();
+        MapView.onPause();
     }
 
-    //方法重写
+    /**
+     * 方法必须重写
+     */
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        bMapView.onSaveInstanceState(outState);
+        MapView.onSaveInstanceState(outState);
     }
 
-    //方法重写
+    /**
+     * 方法必须重写
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();
-        bMapView.onDestroy();
+        MapView.onDestroy();
 
     }
 

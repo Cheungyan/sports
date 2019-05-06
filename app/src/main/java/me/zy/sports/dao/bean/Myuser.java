@@ -66,4 +66,5 @@ public class Myuser extends BmobUser {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
 }

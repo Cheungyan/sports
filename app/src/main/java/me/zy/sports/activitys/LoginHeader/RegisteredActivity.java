@@ -12,13 +12,11 @@ import android.widget.Toast;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobSMS;
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 
 import me.zy.sports.R;
-import me.zy.sports.activitys.BaseActivity;
 import me.zy.sports.activitys.homepage.HomeActivity;
 import me.zy.sports.dao.bean.Myuser;
 import me.zy.sports.utils.Utils;

@@ -14,7 +14,7 @@
             android:icon="@drawable/img_menu_sports" />
 
         <item
-            android:id="@+id/item_liscense"
+            android:id="@+id/item_eat"
             android:checkable="false"
             android:title="@string/eat"
             android:icon="@drawable/img_menu_eat" />
