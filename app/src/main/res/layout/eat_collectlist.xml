@@ -2,35 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/Webviewtb"
+        android:id="@+id/eat_liesttb"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="#009688"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="24dp"
+        app:navigationIcon="@mipmap/title_back"
+        >
 
         <TextView
-            android:id="@+id/t_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="标题显示"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end"
+            android:text="我的收藏"
+            android:textSize="20dp"
             android:textColor="@color/mdtp_white" />
 
-        <ImageView
-            android:id="@+id/i_shoucang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="12dp"
-            android:src="@drawable/shoucang" />
     </android.support.v7.widget.Toolbar>
 
-    <WebView
-        android:id="@+id/mWebView"
+    <ListView
+        android:id="@+id/cListView"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"></ListView>
+
 
 </LinearLayout>

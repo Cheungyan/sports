@@ -41,7 +41,7 @@
 
         <activity
             android:name="me.zy.sports.activitys.homepage.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,6 +72,9 @@
             >
 
         </activity>
+        <activity android:name=".activitys.runningpage.runhome"
+            android:label="跑步">
+        </activity>
 
         <activity
             android:name="me.zy.sports.activitys.Bodypage.BodyBuilding"
@@ -87,6 +90,8 @@
             android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
+        <activity android:name=".activitys.eat.collectEat_Activity"
+            />
         <activity android:name=".activitys.eat.WebViewActivity"/>
 
         <activity android:name=".activitys.LoginHeader.LoginHeader"

@@ -7,92 +7,26 @@
     android:background="#47ae88"
     android:fitsSystemWindows="true"
     android:clipToPadding="true">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <Button
-            android:id="@+id/btn_start"
-            android:layout_width="@dimen/x160"
-            android:layout_height="@dimen/x160"
-            android:text="@string/start_running"
-            android:elevation="@dimen/x60"
-            android:translationZ="@dimen/x40"
-            android:background="@drawable/shape_btn_start"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:layout_width="@dimen/x60"
-            android:layout_height="@dimen/x60"
-            android:layout_margin="@dimen/x20"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
             android:onClick="showNaviMenu"
             android:background="@drawable/img_btn_home_drawermenu"
             android:layout_alignParentLeft="true"
             />
-
-
         <Button
-            android:layout_width="@dimen/x60"
-            android:layout_height="@dimen/x60"
+            android:id="@+id/home_add"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/home_add"
             android:layout_alignParentRight="true"
-            android:onClick="showHistoryTrace"
-            android:layout_margin="@dimen/x20"
-            android:background="@drawable/img_btn_home_history"
             />
-
-
-        <View
-            android:id="@+id/line"
-            android:layout_below="@id/btn_start"
-            android:layout_marginTop="@dimen/y180"
-            android:layout_width="@dimen/x300"
-            android:layout_centerHorizontal="true"
-            android:layout_height="2dp"
-            android:background="#6790ce"
-            />
-
-        <View
-            android:layout_below="@id/btn_start"
-            android:layout_marginTop="@dimen/y178"
-            android:layout_width="@dimen/x280"
-            android:layout_centerHorizontal="true"
-            android:layout_height="2dp"
-            android:background="#6790ce"
-            />
-
-        <View
-            android:layout_below="@id/btn_start"
-            android:layout_marginTop="@dimen/y176"
-            android:layout_width="@dimen/x260"
-            android:layout_centerHorizontal="true"
-            android:layout_height="2dp"
-            android:background="#6790ce"
-            />
-
-        <View
-            android:layout_below="@id/btn_start"
-            android:layout_marginTop="@dimen/y174"
-            android:layout_width="@dimen/x240"
-            android:layout_centerHorizontal="true"
-            android:layout_height="2dp"
-            android:background="#6790ce"
-            android:id="@+id/view" />
-
-        <ImageView
-            android:layout_width="@dimen/x100"
-            android:layout_height="@dimen/y100"
-            android:src="@drawable/img_home_logoshow"
-            android:layout_alignBottom="@+id/view"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="18dp"
-            android:id="@+id/imageView" />
-
-
     </RelativeLayout>
-
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"

@@ -5,7 +5,12 @@
         <item
             android:id="@+id/item_home"
             android:checked="true"
-            android:title="@string/home"
+            android:title="主页面"
+            android:icon="@drawable/img_menu_run" />
+        <item
+            android:id="@+id/run_home"
+            android:checked="true"
+            android:title="跑步"
             android:icon="@drawable/img_menu_run" />
         <item
             android:id="@+id/item_sports"
