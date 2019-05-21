@@ -63,6 +63,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private NavigationView mNavigationView;
     private sportsAdapter sportsAdapter;
     private Button btn_delete;
+    private Button btn_weight;
 
 
     @Override
@@ -82,6 +83,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         btn_add.setOnClickListener(this);
         btn_delete=(Button)findViewById(R.id.home_delete);
         btn_delete.setOnClickListener(this);
+        btn_weight=(Button)findViewById(R.id.weight_add);
+        btn_weight.setOnClickListener(this);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawLayout);
         mNavigationView = (NavigationView) findViewById(R.id.navigation);
         RelativeLayout relativeLayout = (RelativeLayout) mNavigationView.inflateHeaderView(R.layout.navi_heard_layout);
@@ -226,6 +229,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.home_add:
                 startActivity(new Intent(mContext, AddKeepNoteActivity.class));
                 break;
+            case R.id.weight_add:
+                startActivity(new Intent(HomeActivity.this, bodykeepActicity.class));
+                break;
             case R.id.exit:
                 BmobUser.logOut();
                 startActivity(new Intent(HomeActivity.this, LoginHeader.class));
@@ -253,9 +259,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                     case R.id.item_sports:
                         startActivity(new Intent(HomeActivity.this, BodyBuilding.class));
 
-                        break;
-                    case R.id.item_about:
-                        startActivity(new Intent(HomeActivity.this, bodykeepActicity.class));
                         break;
                     case R.id.item_publish:
                         startActivity(new Intent(HomeActivity.this, AllFeedActivity.class));

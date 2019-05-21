@@ -37,6 +37,14 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/home_add" />
 
+        <Button
+            android:id="@+id/weight_add"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="250dp"
+            android:background="@drawable/ic_weight" />
+
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/srl"
             android:layout_width="match_parent"

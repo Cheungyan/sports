@@ -26,11 +26,6 @@
 
 
         <item
-            android:id="@+id/item_about"
-            android:title="@string/item_about"
-            android:checkable="false"
-            android:icon="@drawable/img_navigation_menu_info" />
-        <item
             android:id="@+id/item_publish"
             android:checked="true"
             android:title="发布"

@@ -35,15 +35,8 @@ public class Body extends BmobObject {
     }
 
     private Float weight;
-
-
-
     private Float height;
     private Float newweight;
-
-
-
-
     private boolean sex;
     private Myuser user;
 

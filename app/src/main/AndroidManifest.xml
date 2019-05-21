@@ -114,6 +114,8 @@
         <activity android:name=".activitys.FeedPage.AllFeedActivity"/>
         <activity android:name=".activitys.FeedPage.RelevantActivity"/>
         <activity android:name=".activitys.BodyKeep.bodykeepActicity"/>
+        <activity android:name=".activitys.BodyKeep.bodyData"/>
+        <activity android:name=".activitys.BodyKeep.NewbodyData"/>
     </application>
 
 </manifest>

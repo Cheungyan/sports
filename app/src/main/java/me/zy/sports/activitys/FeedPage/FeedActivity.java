@@ -249,6 +249,7 @@ public class FeedActivity extends AppCompatActivity {
                         }
                     });
                     mFeedCommentNum.setText(String.valueOf(Integer.valueOf(mFeedCommentNum.getText().toString()) + 1));
+                    mAdapter.notifyDataSetChanged();
                 } else {
                     Toast.makeText(FeedActivity.this, "添加失败", Toast.LENGTH_SHORT).show();
                 }
@@ -272,6 +273,7 @@ public class FeedActivity extends AppCompatActivity {
             public void done( BmobException e) {
                 if (e == null) {
                     Toast.makeText(FeedActivity.this, "回复成功", Toast.LENGTH_SHORT).show();
+                    mAdapter.notifyDataSetChanged();
 
                 } else {
                     Toast.makeText(FeedActivity.this, "点赞失败", Toast.LENGTH_SHORT).show();

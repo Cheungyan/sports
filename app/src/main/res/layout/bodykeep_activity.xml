@@ -72,7 +72,7 @@
     </LinearLayout>
 
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
 
@@ -127,7 +127,7 @@
 
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
 
@@ -181,11 +181,11 @@
         </LinearLayout>
 
     </LinearLayout>
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
     <LinearLayout
