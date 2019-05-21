@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_keep_fit_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303135"
+    android:orientation="vertical"
+    tools:context=".activitys.homepage.AddKeepNoteActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mt_today_detail_title_tb"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#222224">
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/content_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/exercise__date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="锻炼时间（日期）"
+                android:textColor="#D4D29F"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/exercise_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="24dp"
+                android:text="运动时长（h）"
+                android:textColor="#D4D29F"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/add_keep_fit_time_length"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/exercise_time_label"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/mdtp_transparent_black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/date_label"
+                android:layout_width="216dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/exercise__date_label"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/add_keep_fit_date_tv"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@color/mdtp_transparent_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/first_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/date_label"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_icon" />
+
+            <LinearLayout
+                android:id="@+id/second_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_line"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/add_keep_fit_run_length_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="跑步距离(km)"
+                        android:textColor="#D4D29F"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/add_keep_fit_run_length"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textColorHint="@color/mdtp_transparent_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/add_keep_fit_sitUps_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="仰卧起坐（个）"
+                        android:textColor="#D4D29F"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/add_keep_fit_sitUps"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textColorHint="@color/mdtp_transparent_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/add_keep_fit_sports_apparatus_times_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="力量器械（组）"
+                        android:textColor="#D4D29F"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/add_keep_fit_sports_apparatus_times"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textColorHint="@color/mdtp_transparent_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+
+                android:id="@+id/second_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/second_ll"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_icon" />
+
+            <View
+                android:id="@+id/third_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/second_line"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/line_icon" />
+
+            <TextView
+                android:id="@+id/add_keep_fit_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/submit_bg"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="#D4D29F"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

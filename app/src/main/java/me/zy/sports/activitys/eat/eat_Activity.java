@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +30,8 @@ import me.zy.sports.dao.bean.MyArticle;
  */
 
 public class eat_Activity extends AppCompatActivity implements View.OnClickListener {
+
+
     private Toolbar toolbar;
     private ListView eListView;
     private List<String>mListTitle=new ArrayList<>();
@@ -78,11 +82,12 @@ public class eat_Activity extends AppCompatActivity implements View.OnClickListe
 
     private void BmobSuc() {
         BmobQuery<MyArticle> MyArticleBmobQuery = new BmobQuery<>();
+        MyArticleBmobQuery.order("-id");
         MyArticleBmobQuery.findObjects(new FindListener<MyArticle>() {
             @Override
             public void done(List<MyArticle> object, BmobException e) {
                 if (e == null) {
-                    Log.w("TTTTTT", "查表成功");
+                    Log.w("TTTTTT", "查表成功"+object.get(0).getAUrl()+object.get(0).getTitle());
                     for(int i=0;i<object.size();i++)
                     {
                         String imageurl=object.get(i).getImage_title().getFileUrl();

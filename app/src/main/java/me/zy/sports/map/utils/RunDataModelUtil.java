@@ -80,12 +80,11 @@ public class RunDataModelUtil {
     }
 
     /**
-     * 获得里程
-     * @param list
-     * @return
+     * 获得里程list
+
      */
     public static float getDistance(List<AMapLocation> list) {
-        float distance = 0;
+            float distance = 0;
         if (list == null || list.size() == 0) {
             return distance;
         }

@@ -43,19 +43,24 @@ public class Location implements LocationSource, AMapLocationListener, SensorEve
     private static float angle = 0;
 
     private MyLocationStyle myLocationStyle;
-
+    //声明定位回调监听器
     private OnLocationChangedListener mListener;
+    //定位服务类。此类提供单次定位、持续定位、地理围栏、最后位置相关功能
     private AMapLocationClient mlocationClient;
+    //定位参数设置
     private AMapLocationClientOption mLocationOption;
 
     //以前的定位点
     private LatLng oldLatLng;
+
+    //历史轨迹 位置集合
+    private List<LatLng> points = new ArrayList<>();
+
     //是否是第一次定位
     private boolean isFirstLatLng = true;
     //定义一个UiSettings对象
     private UiSettings mUiSettings;
-    //历史轨迹 位置集合
-    private List<LatLng> points = new ArrayList<>();
+
     //单次跑步总路程
     private static boolean isRunning = false;
 
@@ -274,8 +279,6 @@ public class Location implements LocationSource, AMapLocationListener, SensorEve
 
     /**
      * 返回当前轨迹记录
-     *
-     * @return
      */
     public PathRecord getRecord() {
 

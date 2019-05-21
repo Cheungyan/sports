@@ -12,10 +12,9 @@ import cn.bmob.v3.BmobUser;
 public class Myuser extends BmobUser {
 
     private int age;
-    private boolean sex;
+
     private String desc;
-    private int height;
-    private int weight;
+
 
     public String getNickname() {
         return nickname;
@@ -35,13 +34,6 @@ public class Myuser extends BmobUser {
         this.age = age;
     }
 
-    public boolean isSex() {
-        return sex;
-    }
-
-    public void setSex(boolean sex) {
-        this.sex = sex;
-    }
 
     public String getDesc() {
         return desc;
@@ -51,20 +43,6 @@ public class Myuser extends BmobUser {
         this.desc = desc;
     }
 
-    public int getHeight() {
-        return height;
-    }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 
 }

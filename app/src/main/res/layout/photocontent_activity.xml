@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00B3ADAD"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/contenttb"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#009688"
+        android:layout_marginTop="24dp"
+        app:navigationIcon="@mipmap/title_back">
+
+        <TextView
+            android:id="@+id/contenttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="健身部位"
+            android:textSize="20dp"
+            android:textColor="@color/mdtp_white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/paListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="5dp"></ListView>
+
+</LinearLayout>

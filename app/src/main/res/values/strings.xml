@@ -20,6 +20,8 @@
     <string name="title_activity_test">Test</string>
     <string name="title_activity_my">MyActivity</string>
     <string name="title_activity_permission">PermissionActivity</string>
+    <string name="first">健身部位</string>
+    <string name="second">健身视频</string>
 
 
     <string-array name="permissions">
@@ -99,6 +101,28 @@
     <string name="device_model">设备型号:</string>
     <string name="sdk_version">SDK版本:</string>
     <string name="no_mail">抱歉，在您的手机上没有找到邮箱类app！</string>
+
+    <!-- Text hint -->
+    <string name="hint_username">用户名</string>
+    <string name="hint_pwd">密码</string>
+    <string name="hint_new_pwd">新密码</string>
+    <string name="hint_do_pwd">确认密码</string>
+    <string name="hint_phone">手机号码</string>
+    <string name="hint_register_agree">同意灵悉的注册邀请，因为没有其他的选择</string>
+    <string name="hint_share">写下今天的普通心情吧</string>
+    <string name="hint_comment">吐槽一下</string>
+    <string name="hint_attention">关注</string>
+    <string name="hint_fans">粉丝</string>
+    <string name="hint_signature_default">这个人很懒，什么也没留下&#8230;</string>
+    <string name="hint_feed">动态</string>
+    <string name="hint_all_feed">全部动态</string>
+    <string name="hint_confidential">保密</string>
+    <string name="hint_future">致未来的我：</string>
+    <string name="hint_future_mail">填入送达邮箱</string>
+    <string name="hint_search">输入搜索内容</string>
+    <string name="hint_search_video">搜索视频</string>
+    <string name="hint_playback_source">播放源 </string>
+    <string name="hint_picture_source">图源：Tujian</string>
 </resources>
 
 

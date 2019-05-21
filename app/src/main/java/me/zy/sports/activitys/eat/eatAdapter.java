@@ -33,6 +33,7 @@ public class eatAdapter extends BaseAdapter {
     private MyArticle data;
 
 
+
     public eatAdapter(Context mContext, List<MyArticle> mList) {
         this.mContext = mContext;
         this.mList = mList;

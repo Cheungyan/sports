@@ -108,7 +108,7 @@ public class WebViewActivity extends AppCompatActivity implements View.OnClickLi
                     } else {
                         shouchang = false;
                         setIma(shouchang);
-                        Toast.makeText(WebViewActivity.this, "未收藏,查询失败：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WebViewActivity.this, "未收藏" , Toast.LENGTH_SHORT).show();
                     }
                 }
             });

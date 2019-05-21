@@ -23,6 +23,7 @@ import android.widget.RelativeLayout;
 import me.zy.sports.R;
 import me.zy.sports.activitys.runningpage.fragments.AMapShowFragment;
 import me.zy.sports.activitys.runningpage.fragments.RunDataShowFragment;
+import me.zy.sports.dao.bean.Myuser;
 import me.zy.sports.map.interfacer.IDataUpdateCallback;
 import me.zy.sports.utils.PermissionUtil;
 import me.zy.sports.utils.StateThemeUtil;
@@ -71,7 +72,7 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        StateThemeUtil.uesState(this);
+        StateThemeUtil.uesState(this);//全屏化并清理跑步页面
         setContentView(R.layout.ac_running);
 
         initFindViewById();
@@ -91,6 +92,7 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
 
         runDataShowFragment = RunDataShowFragment.getInstance();
         //默认展示AMapFragment,即地图页面
+
         aMapShowFragment = new AMapShowFragment();
         if (!aMapShowFragment.isAdded()) {
             FragmentManager fm = getSupportFragmentManager();
@@ -128,30 +130,6 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
         fbtn.setOnClickListener(this);
     }
 
-    /**
-     * 展示地图界面（aMapShowFragment）
-     *
-     */
-    @Override
-    public void showMapFragment() {
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.show(aMapShowFragment);
-        transaction.hide(runDataShowFragment);
-        transaction.commit();
-    }
-
-    /**
-     * 展示数据界面（runDataShowFragment）
-     */
-    @Override
-    public void showDataFragment() {
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.show(runDataShowFragment);
-        transaction.hide(aMapShowFragment);
-        transaction.commit();
-    }
 
     /**
      * 展示跑步控制器(暂停，恢复和结束跑步的控制界面)
@@ -235,6 +213,8 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
     }
 
 
+    Myuser user=Myuser.getCurrentUser(Myuser.class);
+    public String userid=user.getObjectId();
     public void closeLocationWithSave( ) {
         aMapShowFragment.closeLocationWithSaveRunData();
         this.finish();
@@ -244,20 +224,14 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
 
     /**
      * 创建菜单
-     * @param menu
-     * @return
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_others, menu);
         return true;
     }
-
     /**
      * 菜单的点击事件监听
-     *
-     * @param item
-     * @return
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -275,8 +249,29 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
         }
         return true;
     }
-
     /**
+     * 展示地图界面（aMapShowFragment）
+     */
+    @Override
+    public void showMapFragment() {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.show(aMapShowFragment);
+        transaction.hide(runDataShowFragment);
+        transaction.commit();
+    }
+    /*
+     * 展示数据界面（runDataShowFragment）
+     */
+    @Override
+    public void showDataFragment() {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.show(runDataShowFragment);
+        transaction.hide(aMapShowFragment);
+        transaction.commit();
+    }
+    /*
      * 重写返回按钮，在Activity销毁之前询问是否需要保存数据
      */
     @Override
@@ -308,32 +303,26 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
         dialog.setNeutralButton(R.string.cancle, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
-
             }
         });
         dialog.show();
 
     }
-
-
     @Override
     public void setPresenter(RuningContract.Presenter presenter) {
         if (presenter != null) {
             this.presenter = presenter;
         }
     }
-
     @Override
     public void onRequestPermissionsResult(final int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         PermissionUtil.requestPermissionsResult(this, requestCode, permissions, grantResults, permissionGrant);
     }
-
     /**
      * 更新速度
-     * @param vector      更新的值
-     * @param defaultShow 默认的值
+     *       更新的值
+     *defaultShow 默认的值
      *                    下同
      */
     @Override
@@ -347,8 +336,8 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
 
     /**
      * 更新里程
-     * @param distance
-     * @param defaultShow
+     *  distance
+     *  defaultShow
      */
     @Override
     public void upDistance(String distance, String defaultShow) {
@@ -361,8 +350,6 @@ public class RuningActivity extends AppCompatActivity implements RuningContract.
 
     /**
      * 更新时长
-     * @param duration
-     * @param defaultShow
      */
     @Override
     public void upDuration(String duration, String defaultShow) {

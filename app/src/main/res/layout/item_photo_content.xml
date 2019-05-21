@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:background="#D3DFDF"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/ipt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#002C2929"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="鸡肉"
+        android:textColor="#111010"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/ipt_ima"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ipt_yaodian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#002C2929"
+            android:drawableLeft="@drawable/yaodian"
+            android:maxLines="1"
+            android:text="要点:"
+            android:textColor="#111010"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ipt_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#002C2929"
+            android:singleLine="false"
+            android:ellipsize="none"
+            android:text="点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点点"
+            android:textColor="#111010"
+            android:textSize="25sp" />
+    </LinearLayout>
+</LinearLayout>

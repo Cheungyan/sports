@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="214dp"
+    android:background="#303135"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:background="@drawable/circular_bead_black_bg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/main_top_left" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="48dp"
+            android:layout_toLeftOf="@+id/top_line_iv">
+
+            <TextView
+                android:id="@+id/item_top_total_fit_length_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="12dp"
+                android:drawableTop="@drawable/main_top_total_fit_length"
+                android:text="24.7"
+                android:textColor="@color/mdtp_white"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_top_total_fit_length_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="总运动时长(h)"
+                android:textColor="@color/mdtp_white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48dp"
+            android:layout_toRightOf="@+id/top_line_iv">
+
+            <TextView
+                android:id="@+id/item_top_total_day_length_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="12dp"
+                android:drawableTop="@drawable/main_top_total_day_length"
+                android:text="24.7"
+                android:textColor="@color/mdtp_white"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_top_total_day_length_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="总锻炼天数(天)"
+                android:textColor="@color/mdtp_white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/top_line_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/top_line" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/main_top_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/item_top_total_run_length_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="90.56"
+                android:textColor="@color/mdtp_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_top_total_run_length_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="总跑步距离(km)"
+                android:textColor="@color/mdtp_white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/item_top_total_situp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="90.56"
+                android:textColor="@color/mdtp_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_top_total_situp_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="总仰卧起坐(个)"
+                android:textColor="@color/mdtp_white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/item_top_total_sports_apparatus_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="90.56"
+                android:textColor="@color/mdtp_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_top_total_sports_apparatus_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="总力量器械(组)"
+                android:textColor="@color/mdtp_white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

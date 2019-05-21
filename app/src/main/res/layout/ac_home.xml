@@ -4,38 +4,64 @@
     android:id="@+id/drawLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#47ae88"
-    android:fitsSystemWindows="true"
-    android:clipToPadding="true">
+    android:background="#C4C9C7"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
     <RelativeLayout
+        android:id="@+id/home_are"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
         <Button
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginLeft="20dp"
-            android:onClick="showNaviMenu"
-            android:background="@drawable/img_btn_home_drawermenu"
             android:layout_alignParentLeft="true"
-            />
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/img_btn_home_drawermenu"
+            android:onClick="showNaviMenu" />
+
+        <Button
+            android:id="@+id/home_delete"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="200dp"
+            android:background="@drawable/home_delete" />
+
         <Button
             android:id="@+id/home_add"
             android:layout_width="30dp"
             android:layout_height="24dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/home_add"
             android:layout_alignParentRight="true"
-            />
+            android:layout_marginRight="20dp"
+            android:background="@drawable/home_add" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
     </RelativeLayout>
+
+
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_drawer_navi">
-    </android.support.design.widget.NavigationView>
-
-
+        app:menu="@menu/menu_drawer_navi"></android.support.design.widget.NavigationView>
 
 
 </android.support.v4.widget.DrawerLayout>

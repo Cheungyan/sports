@@ -14,9 +14,6 @@ public class TraceUtil {
 
 	/**
 	 * 将AMapLocation List 转为TraceLocation list
-	 *
-	 * @param list
-	 * @return
 	 */
 	public static List<TraceLocation> parseTraceLocationList(
 			List<AMapLocation> list) {
@@ -36,11 +33,8 @@ public class TraceUtil {
 		}
 		return traceList;
 	}
-
 	/**
 	 * 将AMapLocation List 转为LatLng list
-	 * @param list
-	 * @return
 	 */
 	public static List<LatLng> parseLatLngList(List<AMapLocation> list) {
 		List<LatLng> traceList = new ArrayList<>();

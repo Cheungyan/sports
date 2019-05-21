@@ -16,8 +16,7 @@ import me.zy.sports.map.sub.SubMap;
  */
 public class AmapImpl extends SubMap {
 
-
-    private long mStartTime;
+    private long mStartTime;//获得系统的时间，单位为毫秒
 
     private RuningActivity activity;
 
@@ -27,18 +26,15 @@ public class AmapImpl extends SubMap {
     private Location location;
 
     /**
-     * 用于显示轨迹
+     * 用于显示历史轨迹
      *
      * @param
      */
     public AmapImpl(Trace trace) {
-
         this.trace = trace;
         showTraceRecord();
 
     }
-
-
     /**
      * 用于跑步界面
      *
@@ -77,15 +73,12 @@ public class AmapImpl extends SubMap {
 
 
     public void saveRunningData() {
-        RunDataSaveUtil.getInstance(activity)
-                .saveRecord(location
-                        .getRecord()
-                        .getPathline(),mStartTime, location.getDuration());
+        RunDataSaveUtil.getInstance(activity).saveRecord(location.getRecord().getPathline(),mStartTime, location.getDuration());
     }
 
     @Override
-    public void lookHistory() {
 
+    public void lookHistory() {
         showTraceRecord();
     }
 

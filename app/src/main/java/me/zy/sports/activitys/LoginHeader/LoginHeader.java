@@ -37,6 +37,10 @@ public class LoginHeader extends AppCompatActivity implements View.OnClickListen
             super.onCreate(savedInstanceState);
         Bmob.initialize(this,"623a4535779272842b9fe7411f7a6e0e");
             setContentView(R.layout.header_login);
+            if(Myuser.isLogin())
+            {
+                startActivity(new Intent(LoginHeader.this, HomeActivity.class));
+            }
             initView();
     }
 

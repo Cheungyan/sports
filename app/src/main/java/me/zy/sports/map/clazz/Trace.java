@@ -41,8 +41,6 @@ public class Trace {
         this.mRecordItemId = mRecordItemId;
 
     }
-
-
     /**
      * 轨迹数据初始化
      */

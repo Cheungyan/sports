@@ -11,7 +11,6 @@ package me.zy.sports.dao.bean;
  */
 
 public class RunData {
-
     private int id ;
     private String date;
     private float duration;

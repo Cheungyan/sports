@@ -7,7 +7,6 @@ import android.widget.Toast;
 import com.amap.api.location.AMapLocation;
 
 import java.util.List;
-
 import me.zy.sports.dao.bean.PathRecord;
 import me.zy.sports.dao.bean.RunData;
 import me.zy.sports.map.utils.RunDataModelUtil;

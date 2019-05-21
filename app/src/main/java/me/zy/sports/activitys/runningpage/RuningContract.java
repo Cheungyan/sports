@@ -1,8 +1,8 @@
 package me.zy.sports.activitys.runningpage;
 
 
-import me.zy.sports.mvp.BasePresenter;
-import me.zy.sports.mvp.BaseView;
+import me.zy.sports.map.interfacer.BasePresenter;
+import me.zy.sports.map.interfacer.BaseView;
 
 
 public class RuningContract {

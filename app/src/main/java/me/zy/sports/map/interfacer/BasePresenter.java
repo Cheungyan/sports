@@ -1,4 +1,4 @@
-package me.zy.sports.mvp;
+package me.zy.sports.map.interfacer;
 
 
 public interface BasePresenter {

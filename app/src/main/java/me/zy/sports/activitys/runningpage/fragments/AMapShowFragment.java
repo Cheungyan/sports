@@ -30,12 +30,10 @@ public class AMapShowFragment extends Fragment {
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
         MapView.onCreate(savedInstanceState);// 此方法必须重写
         if (aMap == null) {
-
             aMap = MapView.getMap();
             aMap.moveCamera(CameraUpdateFactory.zoomTo(16));
         }
         aMapImpl = new AmapImpl(getActivity(), aMap);
-
         startLocation();
         return view;
 

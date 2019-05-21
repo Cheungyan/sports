@@ -12,7 +12,9 @@ import android.widget.Toast;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobSMS;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.LogInListener;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 
@@ -96,19 +98,13 @@ public class RegisteredActivity extends AppCompatActivity implements View.OnClic
                 {
                     Myuser user=new Myuser();
                     //TODO 设置用户名默认为手机号码
-
-                    user.setUsername(phone);
-                    //TODO 设置用户密码
-                    user.setPassword(password);
-                    user.signUp(new SaveListener<Myuser>() {
-                        @Override
+                    user.signOrLoginByMobilePhone(phone, ver, new LogInListener< Myuser>() {
                         public void done(Myuser bmobUser, BmobException e) {
                             if (e == null) {
                                 Toast.makeText(RegisteredActivity.this,"短信注册成功：" + bmobUser.getUsername(), Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisteredActivity.this, HomeActivity.class));
                             } else {
                                 Toast.makeText(RegisteredActivity.this,"短信注册失败：" + e.getErrorCode() + "-" + e.getMessage(), Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisteredActivity.this, HomeActivity.class));
                                 textView.append("短信注册失败：" + e.getErrorCode() + "-" + e.getMessage() + "\n");
                             }
                         }
